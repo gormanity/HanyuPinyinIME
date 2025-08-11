@@ -1,13 +1,13 @@
 //
-//  RomanizedPinyinIMEUITestsLaunchTests.swift
-//  RomanizedPinyinIMEUITests
+//  HanyuPinyinIMEUITestsLaunchTests.swift
+//  HanyuPinyinIMEUITests
 //
 //  Created by John Gorman on 8/3/25.
 //
 
 import XCTest
 
-final class RomanizedPinyinIMEUITestsLaunchTests: XCTestCase {
+final class HanyuPinyinIMEUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

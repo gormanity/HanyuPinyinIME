@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  RomanizedPinyinIME
+//  HanyuPinyinIME
 //
 //  Created by John Gorman on 8/3/25.
 //

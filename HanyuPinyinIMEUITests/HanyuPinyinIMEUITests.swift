@@ -1,13 +1,13 @@
 //
-//  RomanizedPinyinIMEUITests.swift
-//  RomanizedPinyinIMEUITests
+//  HanyuPinyinIMEUITests.swift
+//  HanyuPinyinIMEUITests
 //
 //  Created by John Gorman on 8/3/25.
 //
 
 import XCTest
 
-final class RomanizedPinyinIMEUITests: XCTestCase {
+final class HanyuPinyinIMEUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
