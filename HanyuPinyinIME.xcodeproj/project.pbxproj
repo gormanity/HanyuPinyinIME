@@ -24,9 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F65CF4612E408407004CCC4D /* HanyuPinyinIME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RomanizedPinyinIME.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65CF46F2E408408004CCC4D /* HanyuPinyinIMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanizedPinyinIMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65CF4792E408408004CCC4D /* HanyuPinyinIMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RomanizedPinyinIMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65CF4612E408407004CCC4D /* RomanizedPinyinIME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RomanizedPinyinIME.app; path = HanyuPinyinIME.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65CF46F2E408408004CCC4D /* RomanizedPinyinIMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RomanizedPinyinIMETests.xctest; path = HanyuPinyinIMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F65CF4792E408408004CCC4D /* RomanizedPinyinIMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RomanizedPinyinIMEUITests.xctest; path = HanyuPinyinIMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,9 +85,9 @@
 		F65CF4622E408407004CCC4D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F65CF4612E408407004CCC4D /* HanyuPinyinIME.app */,
-				F65CF46F2E408408004CCC4D /* HanyuPinyinIMETests.xctest */,
-				F65CF4792E408408004CCC4D /* HanyuPinyinIMEUITests.xctest */,
+				F65CF4612E408407004CCC4D /* RomanizedPinyinIME.app */,
+				F65CF46F2E408408004CCC4D /* RomanizedPinyinIMETests.xctest */,
+				F65CF4792E408408004CCC4D /* RomanizedPinyinIMEUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -114,7 +114,7 @@
 			packageProductDependencies = (
 			);
 			productName = HanyuPinyinIME;
-			productReference = F65CF4612E408407004CCC4D /* HanyuPinyinIME.app */;
+			productReference = F65CF4612E408407004CCC4D /* RomanizedPinyinIME.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F65CF46E2E408408004CCC4D /* HanyuPinyinIMETests */ = {
@@ -137,7 +137,7 @@
 			packageProductDependencies = (
 			);
 			productName = HanyuPinyinIMETests;
-			productReference = F65CF46F2E408408004CCC4D /* HanyuPinyinIMETests.xctest */;
+			productReference = F65CF46F2E408408004CCC4D /* RomanizedPinyinIMETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		F65CF4782E408408004CCC4D /* HanyuPinyinIMEUITests */ = {
@@ -160,7 +160,7 @@
 			packageProductDependencies = (
 			);
 			productName = HanyuPinyinIMEUITests;
-			productReference = F65CF4792E408408004CCC4D /* HanyuPinyinIMEUITests.xctest */;
+			productReference = F65CF4792E408408004CCC4D /* RomanizedPinyinIMEUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
