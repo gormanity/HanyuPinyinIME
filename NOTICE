@@ -1,0 +1,9 @@
+Attribution Notice
+
+This project’s app structure was adapted from:
+
+- ensan-hcl/macOS_IMKitSample_2021
+  Source: https://github.com/ensan-hcl/macOS_IMKitSample_2021
+
+Upstream license: the MIT license text from the upstream project is included at
+`licenses/ensan-hcl.LICENSE`. Please retain upstream notices in adapted files.

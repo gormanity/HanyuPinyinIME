@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+
+# Xcode
+build/
+DerivedData/
+*.xcworkspace
+xcuserdata/
+
+# Swift Package Manager (if used)
+.swiftpm/
+.build/
+
+# Code coverage
+*.xccovreport
+*.xccovarchive
+
+# Other temp/editor
+*.swp
+*.swo
+*.tmp
+
+# VCS
+.jj/

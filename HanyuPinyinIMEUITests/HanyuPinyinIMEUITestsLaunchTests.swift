@@ -1,13 +1,6 @@
-//
-//  HanyuPinyinIMEUITestsLaunchTests.swift
-//  HanyuPinyinIMEUITests
-//
-//  Created by John Gorman on 8/3/25.
-//
-
 import XCTest
 
-final class HanyuPinyinIMEUITestsLaunchTests: XCTestCase {
+class HanyuPinyinIMEUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
@@ -17,7 +10,6 @@ final class HanyuPinyinIMEUITestsLaunchTests: XCTestCase {
         continueAfterFailure = false
     }
 
-    @MainActor
     func testLaunch() throws {
         let app = XCUIApplication()
         app.launch()

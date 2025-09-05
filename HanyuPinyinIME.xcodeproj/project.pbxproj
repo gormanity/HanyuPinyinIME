@@ -3,66 +3,71 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 55;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1A41E61C26E745DD009B65D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E61B26E745DD009B65D7 /* Assets.xcassets */; };
+		1A41E61F26E745DD009B65D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A41E61E26E745DD009B65D7 /* Preview Assets.xcassets */; };
+		1A41E62926E745DD009B65D7 /* HanyuPinyinIMETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E62826E745DD009B65D7 /* HanyuPinyinIMETests.swift */; };
+		1A41E63326E745DD009B65D7 /* HanyuPinyinIMEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E63226E745DD009B65D7 /* HanyuPinyinIMEUITests.swift */; };
+		1A41E63526E745DD009B65D7 /* HanyuPinyinIMEUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E63426E745DD009B65D7 /* HanyuPinyinIMEUITestsLaunchTests.swift */; };
+		1A41E64226E74627009B65D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E64126E74627009B65D7 /* AppDelegate.swift */; };
+		1A41E64426E74669009B65D7 /* HanyuPinyinIMEInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A41E64326E74669009B65D7 /* HanyuPinyinIMEInputController.swift */; };
+		F60A199D2E6552B600250B50 /* PinyinEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60A199C2E6552B400250B50 /* PinyinEngine.swift */; };
+		F674170D2E65F9D80044E9D2 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = F674170C2E65F9D80044E9D2 /* Icon.icns */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
-		F65CF4702E408408004CCC4D /* PBXContainerItemProxy */ = {
+		1A41E62526E745DD009B65D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F65CF4592E408407004CCC4D /* Project object */;
+			containerPortal = 1A41E60C26E745D9009B65D7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F65CF4602E408407004CCC4D;
+			remoteGlobalIDString = 1A41E61326E745D9009B65D7;
 			remoteInfo = HanyuPinyinIME;
 		};
-		F65CF47A2E408408004CCC4D /* PBXContainerItemProxy */ = {
+		1A41E62F26E745DD009B65D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F65CF4592E408407004CCC4D /* Project object */;
+			containerPortal = 1A41E60C26E745D9009B65D7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F65CF4602E408407004CCC4D;
+			remoteGlobalIDString = 1A41E61326E745D9009B65D7;
 			remoteInfo = HanyuPinyinIME;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F65CF4612E408407004CCC4D /* RomanizedPinyinIME.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = RomanizedPinyinIME.app; path = HanyuPinyinIME.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65CF46F2E408408004CCC4D /* RomanizedPinyinIMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RomanizedPinyinIMETests.xctest; path = HanyuPinyinIMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F65CF4792E408408004CCC4D /* RomanizedPinyinIMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RomanizedPinyinIMEUITests.xctest; path = HanyuPinyinIMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A41E61426E745D9009B65D7 /* Hanyu Pinyin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hanyu Pinyin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A41E61B26E745DD009B65D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A41E61E26E745DD009B65D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1A41E62426E745DD009B65D7 /* HanyuPinyinIMETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanyuPinyinIMETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A41E62826E745DD009B65D7 /* HanyuPinyinIMETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanyuPinyinIMETests.swift; sourceTree = "<group>"; };
+		1A41E62E26E745DD009B65D7 /* HanyuPinyinIMEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HanyuPinyinIMEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A41E63226E745DD009B65D7 /* HanyuPinyinIMEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanyuPinyinIMEUITests.swift; sourceTree = "<group>"; };
+		1A41E63426E745DD009B65D7 /* HanyuPinyinIMEUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanyuPinyinIMEUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1A41E64126E74627009B65D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A41E64326E74669009B65D7 /* HanyuPinyinIMEInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HanyuPinyinIMEInputController.swift; sourceTree = "<group>"; };
+		1A41E64526E7470D009B65D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		1A41E64826E7495A009B65D7 /* HanyuPinyinIME.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HanyuPinyinIME.entitlements; sourceTree = "<group>"; };
+		F60A199C2E6552B400250B50 /* PinyinEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyinEngine.swift; sourceTree = "<group>"; };
+		F674170C2E65F9D80044E9D2 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		F65CF4632E408407004CCC4D /* HanyuPinyinIME */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HanyuPinyinIME;
-			sourceTree = "<group>";
-		};
-		F65CF4722E408408004CCC4D /* HanyuPinyinIMETests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HanyuPinyinIMETests;
-			sourceTree = "<group>";
-		};
-		F65CF47C2E408408004CCC4D /* HanyuPinyinIMEUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HanyuPinyinIMEUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
-
 /* Begin PBXFrameworksBuildPhase section */
-		F65CF45E2E408407004CCC4D /* Frameworks */ = {
+		1A41E61126E745D9009B65D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65CF46C2E408408004CCC4D /* Frameworks */ = {
+		1A41E62126E745DD009B65D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65CF4762E408408004CCC4D /* Frameworks */ = {
+		1A41E62B26E745DD009B65D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -72,157 +77,185 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F65CF4582E408407004CCC4D = {
+		1A41E60B26E745D9009B65D7 = {
 			isa = PBXGroup;
 			children = (
-				F65CF4632E408407004CCC4D /* HanyuPinyinIME */,
-				F65CF4722E408408004CCC4D /* HanyuPinyinIMETests */,
-				F65CF47C2E408408004CCC4D /* HanyuPinyinIMEUITests */,
-				F65CF4622E408407004CCC4D /* Products */,
+				1A41E61626E745D9009B65D7 /* HanyuPinyinIME */,
+				1A41E62726E745DD009B65D7 /* HanyuPinyinIMETests */,
+				1A41E63126E745DD009B65D7 /* HanyuPinyinIMEUITests */,
+				1A41E61526E745D9009B65D7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F65CF4622E408407004CCC4D /* Products */ = {
+		1A41E61526E745D9009B65D7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F65CF4612E408407004CCC4D /* RomanizedPinyinIME.app */,
-				F65CF46F2E408408004CCC4D /* RomanizedPinyinIMETests.xctest */,
-				F65CF4792E408408004CCC4D /* RomanizedPinyinIMEUITests.xctest */,
+				1A41E61426E745D9009B65D7 /* Hanyu Pinyin.app */,
+				1A41E62426E745DD009B65D7 /* HanyuPinyinIMETests.xctest */,
+				1A41E62E26E745DD009B65D7 /* HanyuPinyinIMEUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1A41E61626E745D9009B65D7 /* HanyuPinyinIME */ = {
+			isa = PBXGroup;
+			children = (
+				F60A199C2E6552B400250B50 /* PinyinEngine.swift */,
+				1A41E64526E7470D009B65D7 /* Info.plist */,
+				1A41E64826E7495A009B65D7 /* HanyuPinyinIME.entitlements */,
+				1A41E64326E74669009B65D7 /* HanyuPinyinIMEInputController.swift */,
+				1A41E64126E74627009B65D7 /* AppDelegate.swift */,
+				1A41E61B26E745DD009B65D7 /* Assets.xcassets */,
+				F674170C2E65F9D80044E9D2 /* Icon.icns */,
+				1A41E61D26E745DD009B65D7 /* Preview Content */,
+			);
+			path = HanyuPinyinIME;
+			sourceTree = "<group>";
+		};
+		1A41E61D26E745DD009B65D7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1A41E61E26E745DD009B65D7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1A41E62726E745DD009B65D7 /* HanyuPinyinIMETests */ = {
+			isa = PBXGroup;
+			children = (
+				1A41E62826E745DD009B65D7 /* HanyuPinyinIMETests.swift */,
+			);
+			path = HanyuPinyinIMETests;
+			sourceTree = "<group>";
+		};
+		1A41E63126E745DD009B65D7 /* HanyuPinyinIMEUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A41E63226E745DD009B65D7 /* HanyuPinyinIMEUITests.swift */,
+				1A41E63426E745DD009B65D7 /* HanyuPinyinIMEUITestsLaunchTests.swift */,
+			);
+			path = HanyuPinyinIMEUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F65CF4602E408407004CCC4D /* HanyuPinyinIME */ = {
+		1A41E61326E745D9009B65D7 /* HanyuPinyinIME */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F65CF4832E408408004CCC4D /* Build configuration list for PBXNativeTarget "HanyuPinyinIME" */;
+			buildConfigurationList = 1A41E63826E745DD009B65D7 /* Build configuration list for PBXNativeTarget "HanyuPinyinIME" */;
 			buildPhases = (
-				F65CF45D2E408407004CCC4D /* Sources */,
-				F65CF45E2E408407004CCC4D /* Frameworks */,
-				F65CF45F2E408407004CCC4D /* Resources */,
+				F6488BA12E68101F0044BC3E /* ShellScript */,
+				1A41E61026E745D9009B65D7 /* Sources */,
+				1A41E61126E745D9009B65D7 /* Frameworks */,
+				1A41E61226E745D9009B65D7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				F65CF4632E408407004CCC4D /* HanyuPinyinIME */,
 			);
 			name = HanyuPinyinIME;
-			packageProductDependencies = (
-			);
 			productName = HanyuPinyinIME;
-			productReference = F65CF4612E408407004CCC4D /* RomanizedPinyinIME.app */;
+			productReference = 1A41E61426E745D9009B65D7 /* Hanyu Pinyin.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F65CF46E2E408408004CCC4D /* HanyuPinyinIMETests */ = {
+		1A41E62326E745DD009B65D7 /* HanyuPinyinIMETests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F65CF4862E408408004CCC4D /* Build configuration list for PBXNativeTarget "HanyuPinyinIMETests" */;
+			buildConfigurationList = 1A41E63B26E745DD009B65D7 /* Build configuration list for PBXNativeTarget "HanyuPinyinIMETests" */;
 			buildPhases = (
-				F65CF46B2E408408004CCC4D /* Sources */,
-				F65CF46C2E408408004CCC4D /* Frameworks */,
-				F65CF46D2E408408004CCC4D /* Resources */,
+				1A41E62026E745DD009B65D7 /* Sources */,
+				1A41E62126E745DD009B65D7 /* Frameworks */,
+				1A41E62226E745DD009B65D7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F65CF4712E408408004CCC4D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F65CF4722E408408004CCC4D /* HanyuPinyinIMETests */,
+				1A41E62626E745DD009B65D7 /* PBXTargetDependency */,
 			);
 			name = HanyuPinyinIMETests;
-			packageProductDependencies = (
-			);
 			productName = HanyuPinyinIMETests;
-			productReference = F65CF46F2E408408004CCC4D /* RomanizedPinyinIMETests.xctest */;
+			productReference = 1A41E62426E745DD009B65D7 /* HanyuPinyinIMETests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F65CF4782E408408004CCC4D /* HanyuPinyinIMEUITests */ = {
+		1A41E62D26E745DD009B65D7 /* HanyuPinyinIMEUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F65CF4892E408408004CCC4D /* Build configuration list for PBXNativeTarget "HanyuPinyinIMEUITests" */;
+			buildConfigurationList = 1A41E63E26E745DD009B65D7 /* Build configuration list for PBXNativeTarget "HanyuPinyinIMEUITests" */;
 			buildPhases = (
-				F65CF4752E408408004CCC4D /* Sources */,
-				F65CF4762E408408004CCC4D /* Frameworks */,
-				F65CF4772E408408004CCC4D /* Resources */,
+				1A41E62A26E745DD009B65D7 /* Sources */,
+				1A41E62B26E745DD009B65D7 /* Frameworks */,
+				1A41E62C26E745DD009B65D7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F65CF47B2E408408004CCC4D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				F65CF47C2E408408004CCC4D /* HanyuPinyinIMEUITests */,
+				1A41E63026E745DD009B65D7 /* PBXTargetDependency */,
 			);
 			name = HanyuPinyinIMEUITests;
-			packageProductDependencies = (
-			);
 			productName = HanyuPinyinIMEUITests;
-			productReference = F65CF4792E408408004CCC4D /* RomanizedPinyinIMEUITests.xctest */;
+			productReference = 1A41E62E26E745DD009B65D7 /* HanyuPinyinIMEUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F65CF4592E408407004CCC4D /* Project object */ = {
+		1A41E60C26E745D9009B65D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					F65CF4602E408407004CCC4D = {
-						CreatedOnToolsVersion = 16.4;
+					1A41E61326E745D9009B65D7 = {
+						CreatedOnToolsVersion = 13.0;
 					};
-					F65CF46E2E408408004CCC4D = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = F65CF4602E408407004CCC4D;
+					1A41E62326E745DD009B65D7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1A41E61326E745D9009B65D7;
 					};
-					F65CF4782E408408004CCC4D = {
-						CreatedOnToolsVersion = 16.4;
-						TestTargetID = F65CF4602E408407004CCC4D;
+					1A41E62D26E745DD009B65D7 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 1A41E61326E745D9009B65D7;
 					};
 				};
 			};
-			buildConfigurationList = F65CF45C2E408407004CCC4D /* Build configuration list for PBXProject "HanyuPinyinIME" */;
+			buildConfigurationList = 1A41E60F26E745D9009B65D7 /* Build configuration list for PBXProject "HanyuPinyinIME" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = F65CF4582E408407004CCC4D;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
-			productRefGroup = F65CF4622E408407004CCC4D /* Products */;
+			mainGroup = 1A41E60B26E745D9009B65D7;
+			productRefGroup = 1A41E61526E745D9009B65D7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F65CF4602E408407004CCC4D /* HanyuPinyinIME */,
-				F65CF46E2E408408004CCC4D /* HanyuPinyinIMETests */,
-				F65CF4782E408408004CCC4D /* HanyuPinyinIMEUITests */,
+				1A41E61326E745D9009B65D7 /* HanyuPinyinIME */,
+				1A41E62326E745DD009B65D7 /* HanyuPinyinIMETests */,
+				1A41E62D26E745DD009B65D7 /* HanyuPinyinIMEUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F65CF45F2E408407004CCC4D /* Resources */ = {
+		1A41E61226E745D9009B65D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F674170D2E65F9D80044E9D2 /* Icon.icns in Resources */,
+				1A41E61F26E745DD009B65D7 /* Preview Assets.xcassets in Resources */,
+				1A41E61C26E745DD009B65D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A41E62226E745DD009B65D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65CF46D2E408408004CCC4D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F65CF4772E408408004CCC4D /* Resources */ = {
+		1A41E62C26E745DD009B65D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,52 +264,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F6488BA12E68101F0044BC3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/bash\nset -euo pipefail\n\n# Bump the build number for non-Debug builds, or do it for all—your call.\n# Common pattern: bump on every build in Debug, or only on Archive/Release.\n# Here we'll bump on *every* Debug build for convenience:\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n  agvtool next-version -all\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		F65CF45D2E408407004CCC4D /* Sources */ = {
+		1A41E61026E745D9009B65D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A41E64226E74627009B65D7 /* AppDelegate.swift in Sources */,
+				1A41E64426E74669009B65D7 /* HanyuPinyinIMEInputController.swift in Sources */,
+				F60A199D2E6552B600250B50 /* PinyinEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65CF46B2E408408004CCC4D /* Sources */ = {
+		1A41E62026E745DD009B65D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A41E62926E745DD009B65D7 /* HanyuPinyinIMETests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F65CF4752E408408004CCC4D /* Sources */ = {
+		1A41E62A26E745DD009B65D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A41E63326E745DD009B65D7 /* HanyuPinyinIMEUITests.swift in Sources */,
+				1A41E63526E745DD009B65D7 /* HanyuPinyinIMEUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F65CF4712E408408004CCC4D /* PBXTargetDependency */ = {
+		1A41E62626E745DD009B65D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F65CF4602E408407004CCC4D /* HanyuPinyinIME */;
-			targetProxy = F65CF4702E408408004CCC4D /* PBXContainerItemProxy */;
+			target = 1A41E61326E745D9009B65D7 /* HanyuPinyinIME */;
+			targetProxy = 1A41E62526E745DD009B65D7 /* PBXContainerItemProxy */;
 		};
-		F65CF47B2E408408004CCC4D /* PBXTargetDependency */ = {
+		1A41E63026E745DD009B65D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F65CF4602E408407004CCC4D /* HanyuPinyinIME */;
-			targetProxy = F65CF47A2E408408004CCC4D /* PBXContainerItemProxy */;
+			target = 1A41E61326E745D9009B65D7 /* HanyuPinyinIME */;
+			targetProxy = 1A41E62F26E745DD009B65D7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F65CF4812E408408004CCC4D /* Debug */ = {
+		1A41E63626E745DD009B65D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -304,11 +365,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = 5TNT8536GR;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -322,25 +381,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_DEFINITION_PLIST = "";
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		F65CF4822E408408004CCC4D /* Release */ = {
+		1A41E63726E745DD009B65D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -368,11 +427,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 5TNT8536GR;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -380,114 +437,145 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_DEFINITION_PLIST = "";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		F65CF4842E408408004CCC4D /* Debug */ = {
+		1A41E63926E745DD009B65D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HanyuPinyinIME/RomanizedPinyinIME.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HanyuPinyinIME/HanyuPinyinIME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"HanyuPinyinIME/Preview Content\"";
 				DEVELOPMENT_TEAM = 5TNT8536GR;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HanyuPinyinIME/Info.plist;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_MODULE_NAME).NSManualApplication";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.HanyuPinyinIME;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.inputmethod.HanyuPinyinIME;
+				PRODUCT_NAME = "Hanyu Pinyin";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		F65CF4852E408408004CCC4D /* Release */ = {
+		1A41E63A26E745DD009B65D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = HanyuPinyinIME/RomanizedPinyinIME.entitlements;
+				CODE_SIGN_ENTITLEMENTS = HanyuPinyinIME/HanyuPinyinIME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"HanyuPinyinIME/Preview Content\"";
 				DEVELOPMENT_TEAM = 5TNT8536GR;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HanyuPinyinIME/Info.plist;
+				INFOPLIST_KEY_LSBackgroundOnly = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSPrincipalClass = "$(PRODUCT_MODULE_NAME).NSManualApplication";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.HanyuPinyinIME;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				REGISTER_APP_GROUPS = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.inputmethod.HanyuPinyinIME;
+				PRODUCT_NAME = "Hanyu Pinyin";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		F65CF4872E408408004CCC4D /* Debug */ = {
+		1A41E63C26E745DD009B65D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5TNT8536GR;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.HanyuPinyinIMETests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.inputmethod.HanyuPinyinIMETests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanyuPinyinIME.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RomanizedPinyinIME";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanyuPinyinIME.app/Contents/MacOS/HanyuPinyinIME";
 			};
 			name = Debug;
 		};
-		F65CF4882E408408004CCC4D /* Release */ = {
+		1A41E63D26E745DD009B65D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5TNT8536GR;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.HanyuPinyinIMETests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.inputmethod.HanyuPinyinIMETests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanyuPinyinIME.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RomanizedPinyinIME";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HanyuPinyinIME.app/Contents/MacOS/HanyuPinyinIME";
 			};
 			name = Release;
 		};
-		F65CF48A2E408408004CCC4D /* Debug */ = {
+		1A41E63F26E745DD009B65D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5TNT8536GR;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.HanyuPinyinIMEUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.inputmethod.HanyuPinyinIMEUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -495,15 +583,21 @@
 			};
 			name = Debug;
 		};
-		F65CF48B2E408408004CCC4D /* Release */ = {
+		1A41E64026E745DD009B65D7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5TNT8536GR;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.HanyuPinyinIMEUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.github.gormanity.inputmethod.HanyuPinyinIMEUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -514,43 +608,43 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F65CF45C2E408407004CCC4D /* Build configuration list for PBXProject "HanyuPinyinIME" */ = {
+		1A41E60F26E745D9009B65D7 /* Build configuration list for PBXProject "HanyuPinyinIME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65CF4812E408408004CCC4D /* Debug */,
-				F65CF4822E408408004CCC4D /* Release */,
+				1A41E63626E745DD009B65D7 /* Debug */,
+				1A41E63726E745DD009B65D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F65CF4832E408408004CCC4D /* Build configuration list for PBXNativeTarget "HanyuPinyinIME" */ = {
+		1A41E63826E745DD009B65D7 /* Build configuration list for PBXNativeTarget "HanyuPinyinIME" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65CF4842E408408004CCC4D /* Debug */,
-				F65CF4852E408408004CCC4D /* Release */,
+				1A41E63926E745DD009B65D7 /* Debug */,
+				1A41E63A26E745DD009B65D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F65CF4862E408408004CCC4D /* Build configuration list for PBXNativeTarget "HanyuPinyinIMETests" */ = {
+		1A41E63B26E745DD009B65D7 /* Build configuration list for PBXNativeTarget "HanyuPinyinIMETests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65CF4872E408408004CCC4D /* Debug */,
-				F65CF4882E408408004CCC4D /* Release */,
+				1A41E63C26E745DD009B65D7 /* Debug */,
+				1A41E63D26E745DD009B65D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F65CF4892E408408004CCC4D /* Build configuration list for PBXNativeTarget "HanyuPinyinIMEUITests" */ = {
+		1A41E63E26E745DD009B65D7 /* Build configuration list for PBXNativeTarget "HanyuPinyinIMEUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F65CF48A2E408408004CCC4D /* Debug */,
-				F65CF48B2E408408004CCC4D /* Release */,
+				1A41E63F26E745DD009B65D7 /* Debug */,
+				1A41E64026E745DD009B65D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F65CF4592E408407004CCC4D /* Project object */;
+	rootObject = 1A41E60C26E745D9009B65D7 /* Project object */;
 }
