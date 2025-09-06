@@ -1,5 +1,5 @@
 import XCTest
-@testable import HanyuPinyinIME
+@testable import Hanyu_Pinyin
 
 class HanyuPinyinIMETests: XCTestCase {
 

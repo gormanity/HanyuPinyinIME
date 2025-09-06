@@ -20,14 +20,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1A41E62526E745DD009B65D7 /* PBXContainerItemProxy */ = {
+		1A41E62F26E745DD009B65D7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A41E60C26E745D9009B65D7 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1A41E61326E745D9009B65D7;
 			remoteInfo = HanyuPinyinIME;
 		};
-		1A41E62F26E745DD009B65D7 /* PBXContainerItemProxy */ = {
+		F6D250882E6CC91E004B9A5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1A41E60C26E745D9009B65D7 /* Project object */;
 			proxyType = 1;
@@ -172,7 +172,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				1A41E62626E745DD009B65D7 /* PBXTargetDependency */,
+				F6D250892E6CC91E004B9A5F /* PBXTargetDependency */,
 			);
 			name = HanyuPinyinIMETests;
 			productName = HanyuPinyinIMETests;
@@ -321,15 +321,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1A41E62626E745DD009B65D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1A41E61326E745D9009B65D7 /* HanyuPinyinIME */;
-			targetProxy = 1A41E62526E745DD009B65D7 /* PBXContainerItemProxy */;
-		};
 		1A41E63026E745DD009B65D7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1A41E61326E745D9009B65D7 /* HanyuPinyinIME */;
 			targetProxy = 1A41E62F26E745DD009B65D7 /* PBXContainerItemProxy */;
+		};
+		F6D250892E6CC91E004B9A5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A41E61326E745D9009B65D7 /* HanyuPinyinIME */;
+			targetProxy = F6D250882E6CC91E004B9A5F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -459,7 +459,7 @@
 				CODE_SIGN_ENTITLEMENTS = HanyuPinyinIME/HanyuPinyinIME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 36;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"HanyuPinyinIME/Preview Content\"";
 				DEVELOPMENT_TEAM = 5TNT8536GR;
@@ -493,7 +493,7 @@
 				CODE_SIGN_ENTITLEMENTS = HanyuPinyinIME/HanyuPinyinIME.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 36;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"HanyuPinyinIME/Preview Content\"";
 				DEVELOPMENT_TEAM = 5TNT8536GR;
@@ -526,7 +526,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 36;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 5TNT8536GR;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -552,7 +552,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 36;
 				DEFINES_MODULE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -576,7 +576,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 36;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,7 +598,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 36;
 				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
