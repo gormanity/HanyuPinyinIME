@@ -168,5 +168,167 @@ final class PinyinEngineSpecTests: XCTestCase {
         XCTAssertEqual(engine.convert(syllable: "", tone: 3), "")
         XCTAssertEqual(engine.convert(syllable: "sh", tone: 2), "sh") // no vowel
     }
-}
 
+    func testEr_AllTones_AndNeutral() {
+        let cases: [Case] = [
+            .init(syllable: "er", tone: 1, expected: "ēr", note: "er tone 1"),
+            .init(syllable: "er", tone: 2, expected: "ér", note: "er tone 2"),
+            .init(syllable: "er", tone: 3, expected: "ěr", note: "er tone 3"),
+            .init(syllable: "er", tone: 4, expected: "èr", note: "er tone 4"),
+            .init(syllable: "er", tone: 5, expected: "er", note: "er neutral tone")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testBasicVowels_AllTones() {
+        // Verify tones 1-4 for basic vowels a/e/i/o/u and ü via nv
+        let cases: [Case] = [
+            .init(syllable: "a", tone: 1, expected: "ā", note: "a1"),
+            .init(syllable: "a", tone: 2, expected: "á", note: "a2"),
+            .init(syllable: "a", tone: 3, expected: "ǎ", note: "a3"),
+            .init(syllable: "a", tone: 4, expected: "à", note: "a4"),
+
+            .init(syllable: "e", tone: 1, expected: "ē", note: "e1"),
+            .init(syllable: "e", tone: 2, expected: "é", note: "e2"),
+            .init(syllable: "e", tone: 3, expected: "ě", note: "e3"),
+            .init(syllable: "e", tone: 4, expected: "è", note: "e4"),
+
+            .init(syllable: "i", tone: 1, expected: "ī", note: "i1"),
+            .init(syllable: "i", tone: 2, expected: "í", note: "i2"),
+            .init(syllable: "i", tone: 3, expected: "ǐ", note: "i3"),
+            .init(syllable: "i", tone: 4, expected: "ì", note: "i4"),
+
+            .init(syllable: "o", tone: 1, expected: "ō", note: "o1"),
+            .init(syllable: "o", tone: 2, expected: "ó", note: "o2"),
+            .init(syllable: "o", tone: 3, expected: "ǒ", note: "o3"),
+            .init(syllable: "o", tone: 4, expected: "ò", note: "o4"),
+
+            .init(syllable: "u", tone: 1, expected: "ū", note: "u1"),
+            .init(syllable: "u", tone: 2, expected: "ú", note: "u2"),
+            .init(syllable: "u", tone: 3, expected: "ǔ", note: "u3"),
+            .init(syllable: "u", tone: 4, expected: "ù", note: "u4"),
+
+            .init(syllable: "nv", tone: 1, expected: "nǖ", note: "ü1 via nv"),
+            .init(syllable: "nv", tone: 2, expected: "nǘ", note: "ü2 via nv"),
+            .init(syllable: "nv", tone: 3, expected: "nǚ", note: "ü3 via nv"),
+            .init(syllable: "nv", tone: 4, expected: "nǜ", note: "ü4 via nv")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testUmlaut_AfterJQXY_MoreCases() {
+        // jun/qun/xun/yun; xuan/quan; que — all written without diaeresis but toned correctly
+        let cases: [Case] = [
+            .init(syllable: "jvn", tone: 2, expected: "jún", note: "jün -> jun"),
+            .init(syllable: "qvn", tone: 3, expected: "qǔn", note: "qü n -> qun"),
+            .init(syllable: "xvn", tone: 4, expected: "xùn", note: "xün -> xun"),
+            .init(syllable: "yvn", tone: 2, expected: "yún", note: "yün -> yun"),
+
+            .init(syllable: "xvan", tone: 3, expected: "xuǎn", note: "xüan -> xuan, a priority"),
+            .init(syllable: "qvan", tone: 2, expected: "quán", note: "qüan -> quan, a priority"),
+            .init(syllable: "qve", tone: 2, expected: "qué", note: "qüe -> que, e priority"),
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testFinals_Breadth_WY_AndCommon() {
+        let cases: [Case] = [
+            .init(syllable: "you", tone: 2, expected: "yóu", note: "ou -> o marked"),
+            .init(syllable: "wei", tone: 4, expected: "wèi", note: "ei -> e priority"),
+            .init(syllable: "wang", tone: 3, expected: "wǎng", note: "a priority"),
+            .init(syllable: "ying", tone: 2, expected: "yíng", note: "i marked"),
+            .init(syllable: "yong", tone: 3, expected: "yǒng", note: "ong -> o marked"),
+            .init(syllable: "zhou", tone: 2, expected: "zhóu", note: "ou -> o marked"),
+            .init(syllable: "dou", tone: 3, expected: "dǒu", note: "ou -> o marked")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testNasalAndMedials_Variety() {
+        let cases: [Case] = [
+            .init(syllable: "pin", tone: 4, expected: "pìn", note: "in -> i marked"),
+            .init(syllable: "ming", tone: 2, expected: "míng", note: "ing -> i marked"),
+            .init(syllable: "kun", tone: 3, expected: "kǔn", note: "un -> u marked"),
+            .init(syllable: "guai", tone: 3, expected: "guǎi", note: "uai -> a priority"),
+            .init(syllable: "duan", tone: 4, expected: "duàn", note: "uan -> a priority"),
+            .init(syllable: "zhuang", tone: 2, expected: "zhuáng", note: "uang -> a priority")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testUI_IU_AdditionalCoverage() {
+        let cases: [Case] = [
+            .init(syllable: "jiu", tone: 2, expected: "jiú", note: "iu -> u marked"),
+            .init(syllable: "miu", tone: 3, expected: "miǔ", note: "iu -> u marked"),
+            .init(syllable: "dui", tone: 4, expected: "duì", note: "ui -> i marked"),
+            .init(syllable: "zhui", tone: 3, expected: "zhuǐ", note: "ui -> i marked")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testNeutralTone_BroaderCoverage() {
+        let cases: [Case] = [
+            .init(syllable: "nv", tone: 5, expected: "nü", note: "neutral keeps ü, no tone"),
+            .init(syllable: "yvan", tone: 5, expected: "yuan", note: "neutral, no diaeresis after y"),
+            .init(syllable: "shui", tone: 5, expected: "shui", note: "neutral ui"),
+            .init(syllable: "er", tone: 5, expected: "er", note: "neutral er")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testCapitalization_TitleCase() {
+        let cases: [Case] = [
+            .init(syllable: "Ma", tone: 1, expected: "Mā", note: "consonant + a, title case"),
+            .init(syllable: "Ai", tone: 2, expected: "Ái", note: "initial vowel capitalized"),
+            .init(syllable: "Er", tone: 3, expected: "Ěr", note: "er with uppercase tone"),
+            .init(syllable: "Nv", tone: 3, expected: "Nǚ", note: "N + ü retains diaeresis; lowercase ü"),
+            .init(syllable: "Lve", tone: 4, expected: "Lüè", note: "lüe; e gets tone"),
+            .init(syllable: "Jv", tone: 1, expected: "Jū", note: "J + v -> Ju with tone on u"),
+            .init(syllable: "Yvan", tone: 3, expected: "Yuǎn", note: "Y + v -> Yuan; a gets tone"),
+            .init(syllable: "Qve", tone: 2, expected: "Qué", note: "Q + v -> Que; e gets tone"),
+            .init(syllable: "Zhong", tone: 1, expected: "Zhōng", note: "compound initial, title case"),
+            .init(syllable: "Shui", tone: 3, expected: "Shuǐ", note: "ui -> i marked, title case"),
+            .init(syllable: "You", tone: 5, expected: "You", note: "neutral tone retains title case")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+
+    func testCapitalization_AllCaps() {
+        let cases: [Case] = [
+            .init(syllable: "MA", tone: 1, expected: "MĀ", note: "all caps a1"),
+            .init(syllable: "OU", tone: 4, expected: "ÒU", note: "ou -> o marked, all caps"),
+            .init(syllable: "NV", tone: 3, expected: "NǙ", note: "N + V -> N + Ü with tone 3"),
+            .init(syllable: "QVE", tone: 2, expected: "QUÉ", note: "after Q, V->U; e gets tone, all caps"),
+            .init(syllable: "ZHONG", tone: 1, expected: "ZHŌNG", note: "compound initial, all caps"),
+            .init(syllable: "SHUI", tone: 3, expected: "SHUǏ", note: "ui -> i marked, all caps")
+        ]
+
+        for c in cases {
+            XCTAssertEqual(engine.convert(syllable: c.syllable, tone: c.tone), c.expected, c.note)
+        }
+    }
+}
