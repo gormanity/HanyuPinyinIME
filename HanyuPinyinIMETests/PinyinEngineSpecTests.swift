@@ -332,3 +332,215 @@ final class PinyinEngineSpecTests: XCTestCase {
         }
     }
 }
+
+// A structured, spec-mapped conformance report. This aggregates cases by
+// spec aspect (ISO 7098 / GB/T 16159) and produces a single attachment
+// summarizing pass/fail counts per aspect, plus details for any failures.
+final class SpecConformanceReportTests: XCTestCase {
+    struct SpecCase {
+        let syllable: String
+        let tone: Int
+        let expected: String
+        let note: String
+    }
+
+    struct SpecSection {
+        let spec: String   // e.g., "ISO 7098" or "GB/T 16159"
+        let title: String  // short description of the aspect
+        let cases: [SpecCase]
+    }
+
+    func test_Spec_Conformance_Report() {
+        let engine = PinyinEngine()
+
+        let sections: [SpecSection] = [
+            SpecSection(
+                spec: "ISO 7098",
+                title: "Tone placement: a/e priority; ou on o; else last vowel",
+                cases: [
+                    .init(syllable: "ba", tone: 1, expected: "bā", note: "a priority"),
+                    .init(syllable: "me", tone: 2, expected: "mé", note: "e priority"),
+                    .init(syllable: "li", tone: 3, expected: "lǐ", note: "last vowel i"),
+                    .init(syllable: "bo", tone: 4, expected: "bò", note: "last vowel o"),
+                    .init(syllable: "lu", tone: 2, expected: "lú", note: "last vowel u"),
+                    .init(syllable: "ai", tone: 2, expected: "ái", note: "last vowel i"),
+                    .init(syllable: "ei", tone: 3, expected: "ěi", note: "e priority"),
+                    .init(syllable: "ao", tone: 4, expected: "ào", note: "a priority"),
+                    .init(syllable: "ou", tone: 3, expected: "ǒu", note: "ou -> o"),
+                    .init(syllable: "en", tone: 3, expected: "ěn", note: "e priority"),
+                    .init(syllable: "ang", tone: 4, expected: "àng", note: "a priority"),
+                    .init(syllable: "eng", tone: 2, expected: "éng", note: "e priority"),
+                    .init(syllable: "ong", tone: 3, expected: "ǒng", note: "o marked")
+                ]
+            ),
+            SpecSection(
+                spec: "ISO 7098",
+                title: "UI/IU special: mark last vowel (liù, guī)",
+                cases: [
+                    .init(syllable: "liu", tone: 4, expected: "liù", note: "iu -> u"),
+                    .init(syllable: "niu", tone: 3, expected: "niǔ", note: "iu -> u"),
+                    .init(syllable: "gui", tone: 1, expected: "guī", note: "ui -> i"),
+                    .init(syllable: "shui", tone: 2, expected: "shuí", note: "ui -> i")
+                ]
+            ),
+            SpecSection(
+                spec: "GB/T 16159",
+                title: "Apical vowel i (zhi, chi, shi, ri, zi, ci, si)",
+                cases: [
+                    .init(syllable: "zhi", tone: 1, expected: "zhī", note: "apical i"),
+                    .init(syllable: "chi", tone: 2, expected: "chí", note: "apical i"),
+                    .init(syllable: "shi", tone: 4, expected: "shì", note: "apical i"),
+                    .init(syllable: "ri", tone: 3, expected: "rǐ", note: "apical i"),
+                    .init(syllable: "zi", tone: 1, expected: "zī", note: "apical i"),
+                    .init(syllable: "ci", tone: 2, expected: "cí", note: "apical i"),
+                    .init(syllable: "si", tone: 3, expected: "sǐ", note: "apical i")
+                ]
+            ),
+            SpecSection(
+                spec: "GB/T 16159",
+                title: "Ü after J/Q/X/Y written as u (ju/jue/juan/jun; yu/yue/yuan/yun)",
+                cases: [
+                    .init(syllable: "jv", tone: 1, expected: "jū", note: "jü -> ju"),
+                    .init(syllable: "jve", tone: 4, expected: "juè", note: "jüe -> jue"),
+                    .init(syllable: "jvan", tone: 2, expected: "juán", note: "jüan -> juan"),
+                    .init(syllable: "qv", tone: 3, expected: "qǔ", note: "qü -> qu"),
+                    .init(syllable: "xve", tone: 2, expected: "xué", note: "xüe -> xue"),
+                    .init(syllable: "yv", tone: 2, expected: "yú", note: "yü -> yu"),
+                    .init(syllable: "yve", tone: 1, expected: "yuē", note: "yüe -> yue"),
+                    .init(syllable: "yvan", tone: 3, expected: "yuǎn", note: "yüan -> yuan"),
+                    .init(syllable: "jvn", tone: 2, expected: "jún", note: "jün -> jun"),
+                    .init(syllable: "xvn", tone: 4, expected: "xùn", note: "xün -> xun"),
+                    .init(syllable: "qvan", tone: 2, expected: "quán", note: "qüan -> quan"),
+                    .init(syllable: "qve", tone: 2, expected: "qué", note: "qüe -> que")
+                ]
+            ),
+            SpecSection(
+                spec: "GB/T 16159",
+                title: "Ü retained for N/L (nü/lü; nüe/lüe)",
+                cases: [
+                    .init(syllable: "nv", tone: 3, expected: "nǚ", note: "nü retained"),
+                    .init(syllable: "lv", tone: 4, expected: "lǜ", note: "lü retained"),
+                    .init(syllable: "nve", tone: 2, expected: "nüé", note: "nüe; e gets tone"),
+                    .init(syllable: "lve", tone: 4, expected: "lüè", note: "lue; e gets tone")
+                ]
+            ),
+            SpecSection(
+                spec: "ISO 7098",
+                title: "Y-/W- orthography mapping and tone placement",
+                cases: [
+                    .init(syllable: "you", tone: 2, expected: "yóu", note: "ou -> o"),
+                    .init(syllable: "wei", tone: 4, expected: "wèi", note: "ei -> e"),
+                    .init(syllable: "wang", tone: 3, expected: "wǎng", note: "a priority"),
+                    .init(syllable: "ying", tone: 2, expected: "yíng", note: "i marked"),
+                    .init(syllable: "yong", tone: 3, expected: "yǒng", note: "o marked")
+                ]
+            ),
+            SpecSection(
+                spec: "ISO 7098",
+                title: "Nasal finals and medials (variety)",
+                cases: [
+                    .init(syllable: "pin", tone: 4, expected: "pìn", note: "in -> i"),
+                    .init(syllable: "ming", tone: 2, expected: "míng", note: "ing -> i"),
+                    .init(syllable: "kun", tone: 3, expected: "kǔn", note: "un -> u"),
+                    .init(syllable: "guai", tone: 3, expected: "guǎi", note: "uai -> a"),
+                    .init(syllable: "duan", tone: 4, expected: "duàn", note: "uan -> a"),
+                    .init(syllable: "zhuang", tone: 2, expected: "zhuáng", note: "uang -> a"),
+                    .init(syllable: "xiong", tone: 2, expected: "xióng", note: "iong -> o"),
+                    .init(syllable: "tuo", tone: 4, expected: "tuò", note: "uo -> o"),
+                    .init(syllable: "xia", tone: 2, expected: "xiá", note: "a priority"),
+                    .init(syllable: "xie", tone: 4, expected: "xiè", note: "e priority"),
+                    .init(syllable: "biao", tone: 1, expected: "biāo", note: "iao -> a"),
+                    .init(syllable: "lian", tone: 3, expected: "liǎn", note: "ian -> a"),
+                    .init(syllable: "liang", tone: 4, expected: "liàng", note: "iang -> a"),
+                    .init(syllable: "lin", tone: 2, expected: "lín", note: "i marked"),
+                    .init(syllable: "ting", tone: 3, expected: "tǐng", note: "i marked"),
+                    .init(syllable: "lun", tone: 2, expected: "lún", note: "u marked")
+                ]
+            ),
+            SpecSection(
+                spec: "ISO 7098",
+                title: "Erhua: 'er' takes tone on e",
+                cases: [
+                    .init(syllable: "er", tone: 1, expected: "ēr", note: "tone 1"),
+                    .init(syllable: "er", tone: 2, expected: "ér", note: "tone 2"),
+                    .init(syllable: "er", tone: 3, expected: "ěr", note: "tone 3"),
+                    .init(syllable: "er", tone: 4, expected: "èr", note: "tone 4")
+                ]
+            ),
+            SpecSection(
+                spec: "ISO 7098",
+                title: "Neutral tone has no diacritic",
+                cases: [
+                    .init(syllable: "ma", tone: 5, expected: "ma", note: "neutral"),
+                    .init(syllable: "de", tone: 5, expected: "de", note: "neutral"),
+                    .init(syllable: "men", tone: 5, expected: "men", note: "neutral"),
+                    .init(syllable: "ou", tone: 5, expected: "ou", note: "neutral"),
+                    .init(syllable: "nv", tone: 5, expected: "nü", note: "neutral ü retained"),
+                    .init(syllable: "yvan", tone: 5, expected: "yuan", note: "neutral ü->u"),
+                    .init(syllable: "shui", tone: 5, expected: "shui", note: "neutral ui"),
+                    .init(syllable: "er", tone: 5, expected: "er", note: "neutral er")
+                ]
+            ),
+            SpecSection(
+                spec: "ISO 7098 / GB/T 16159",
+                title: "Capitalization with diacritics (Title Case & ALL CAPS)",
+                cases: [
+                    .init(syllable: "Ma", tone: 1, expected: "Mā", note: "title case"),
+                    .init(syllable: "Ai", tone: 2, expected: "Ái", note: "uppercase diacritic on initial vowel"),
+                    .init(syllable: "Er", tone: 3, expected: "Ěr", note: "uppercase diacritic on e"),
+                    .init(syllable: "Nv", tone: 3, expected: "Nǚ", note: "N + ü retained"),
+                    .init(syllable: "Lve", tone: 4, expected: "Lüè", note: "lüe; e gets tone"),
+                    .init(syllable: "Jv", tone: 1, expected: "Jū", note: "J + v -> Ju"),
+                    .init(syllable: "Yvan", tone: 3, expected: "Yuǎn", note: "Y + v -> Yuan; a gets tone"),
+                    .init(syllable: "Qve", tone: 2, expected: "Qué", note: "Q + v -> Que; e gets tone"),
+                    .init(syllable: "Zhong", tone: 1, expected: "Zhōng", note: "compound initial"),
+                    .init(syllable: "Shui", tone: 3, expected: "Shuǐ", note: "ui -> i"),
+                    .init(syllable: "You", tone: 5, expected: "You", note: "neutral title"),
+                    .init(syllable: "MA", tone: 1, expected: "MĀ", note: "ALL CAPS"),
+                    .init(syllable: "OU", tone: 4, expected: "ÒU", note: "ALL CAPS"),
+                    .init(syllable: "NV", tone: 3, expected: "NǙ", note: "ALL CAPS N + V -> N + Ü"),
+                    .init(syllable: "QVE", tone: 2, expected: "QUÉ", note: "ALL CAPS after Q; e gets tone"),
+                    .init(syllable: "ZHONG", tone: 1, expected: "ZHŌNG", note: "ALL CAPS"),
+                    .init(syllable: "SHUI", tone: 3, expected: "SHUǏ", note: "ALL CAPS ui -> i")
+                ]
+            )
+        ]
+
+        var report = "Spec Conformance Report (GB/T 16159 & ISO 7098)\n"
+        var totalFailures = 0
+
+        for section in sections {
+            var passes = 0
+            var fails = 0
+            var failDetails: [String] = []
+
+            for c in section.cases {
+                let got = engine.convert(syllable: c.syllable, tone: c.tone)
+                if got == c.expected {
+                    passes += 1
+                } else {
+                    fails += 1
+                    let detail = "  - FAIL: \(section.spec) — \(section.title): \(c.syllable) +\(c.tone) expected \(c.expected) got \(got) [\(c.note)]"
+                    failDetails.append(detail)
+                }
+            }
+
+            totalFailures += fails
+            let status = fails == 0 ? "PASS" : "FAIL"
+            report += "- [\(status)] \(section.spec) — \(section.title): \(passes)/\(section.cases.count)\n"
+            if !failDetails.isEmpty {
+                report += failDetails.joined(separator: "\n") + "\n"
+            }
+        }
+
+        let attachment = XCTAttachment(string: report)
+        attachment.name = "Spec Conformance Report"
+        attachment.lifetime = .keepAlways
+        add(attachment)
+        print(report)
+
+        if totalFailures > 0 {
+            XCTFail("Spec conformance failures detected. See report attachment.")
+        }
+    }
+}
