@@ -38,7 +38,9 @@ build:
 	  -derivedDataPath "$(DERIVED_DATA)" \
 	  build
 
+
 test:
+	rm -rf "$(RESULT_BUNDLE)"
 	xcodebuild \
 	  -project "$(PROJECT)" \
 	  -scheme "$(SCHEME)" \
